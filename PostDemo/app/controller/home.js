@@ -14,6 +14,13 @@ class HomeController extends Controller {
     const result = await ctx.service.pO.Post2DNA();
     ctx.body = result?"Post po success":"Post fail";
   }
+  async index3()
+  {
+    const { ctx } = this;
+    const result =  await ctx.service.supplier.Post2DNA();
+    ctx.body = result?"Post supplier success":"Post fail";
+
+  }
 }
 
 module.exports = HomeController;
